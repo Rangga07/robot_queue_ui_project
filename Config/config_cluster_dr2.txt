@@ -1,0 +1,1 @@
+{"clusterList":[5],"selectedRoom":[624],"selectedCluster":5,"selectedLine":"482"}

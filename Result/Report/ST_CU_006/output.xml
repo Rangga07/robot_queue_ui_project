@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on win32)" generated="20240123 14:47:03.118" rpa="false" schemaversion="4">
+<suite id="s1" name="St Cu 006" source="c:\Users\RANGGA\Documents\Robot_Project\Project Single Queue\SingleQueue_UI_Dev\tests\st_cu_006.robot">
+<test id="s1-t1" name="login_admin" line="14">
+<kw name="Open Browser Begin" library="Login">
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20240123 14:47:08.582" level="INFO">Webdriver version taken into use: ChromeDriver 119.0.6045.105 (38c72552c5e15ba9b3117c0967a0fd105072d7c6-refs/branch-heads/6045@{#1103})
+</msg>
+<msg timestamp="20240123 14:47:12.346" level="INFO">Targeted browser version: 120.0.6099</msg>
+<msg timestamp="20240123 14:47:12.346" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240123 14:47:14.619" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20240123 14:47:14.629" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<status status="PASS" starttime="20240123 14:47:08.010" endtime="20240123 14:47:14.629"/>
+</kw>
+<kw name="Go To" library="RPA.Browser.Selenium">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240123 14:47:14.643" level="INFO">Opening url 'http://dcaller.cd.local/'</msg>
+<status status="PASS" starttime="20240123 14:47:14.637" endtime="20240123 14:47:15.467"/>
+</kw>
+<kw name="Maximize Browser Window" library="RPA.Browser.Selenium">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240123 14:47:15.472" endtime="20240123 14:47:16.418"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:08.004" endtime="20240123 14:47:16.418"/>
+</kw>
+<kw name="Login Admin" library="Login">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:18.434" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:16.429" endtime="20240123 14:47:18.434"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="RPA.Browser.Selenium">
+<arg>${username_field}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240123 14:47:18.434" endtime="20240123 14:47:18.497"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${username_field}</arg>
+<arg>${USERNAME_ADMIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:18.497" level="INFO">Typing text 'admin_caller' into text field 'xpath=//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:18.497" endtime="20240123 14:47:18.649"/>
+</kw>
+<kw name="Input Text" library="RPA.Browser.Selenium">
+<arg>${password_field}</arg>
+<arg>${PASSWORD_ADMIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:18.657" level="INFO">Typing text 'Mandaya123' into text field 'xpath=//input[@name="password"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:18.649" endtime="20240123 14:47:18.822"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${btn_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:18.826" level="INFO">Clicking element 'xpath=//input[@name="login"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:18.825" endtime="20240123 14:47:19.258"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:21.280" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:19.258" endtime="20240123 14:47:21.280"/>
+</kw>
+<kw name="Switch Window" library="RPA.Browser.Selenium">
+<arg>title=caller</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240123 14:47:21.280" endtime="20240123 14:47:21.403"/>
+</kw>
+<kw name="Wait And Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_caller_unit}</arg>
+<doc>Click button identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:47:21.466" level="INFO">Clicking button 'xpath=//button[@class="btn caller-btn text-uppercase fw-700 fs-14 d-block mx-auto mb-3"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:21.407" endtime="20240123 14:47:21.636"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:16.424" endtime="20240123 14:47:21.639"/>
+</kw>
+<kw name="Set Local Storage Config" library="Keywords_Config">
+<kw name="Read File" library="RPA.FileSystem">
+<var>${local_storage_value}</var>
+<arg>c:\\Users\\RANGGA\\Documents\\Robot_Project\\Project Single Queue\\SingleQueue_UI_Dev\\Resources\\Config/../../Config/config.txt</arg>
+<doc>Reads a file as text, with given `encoding`, and returns the content."</doc>
+<msg timestamp="20240123 14:47:21.657" level="INFO">${local_storage_value} = {"orderBy":1,"selectDesk":{"id":34,"name":"AUTO TEST DESK 04"},"isAllDesk":false,"listDesk":[{"id":34,"name":"AUTO TEST DESK 04"},{"id":33,"name":"AUTO TEST DESK 03"},{"id":32,"name":"AUTO TEST DESK 0...</msg>
+<status status="PASS" starttime="20240123 14:47:21.642" endtime="20240123 14:47:21.660"/>
+</kw>
+<kw name="Execute Javascript" library="RPA.Browser.Selenium">
+<arg>localStorage.setItem('config', '${local_storage_value}');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 14:47:21.668" level="INFO">Executing JavaScript:
+localStorage.setItem('config', '{"orderBy":1,"selectDesk":{"id":34,"name":"AUTO TEST DESK 04"},"isAllDesk":false,"listDesk":[{"id":34,"name":"AUTO TEST DESK 04"},{"id":33,"name":"AUTO TEST DESK 03"},{"id":32,"name":"AUTO TEST DESK 02"},{"id":31,"name":"AUTO TEST DESK 01"}],"selectLine":[{"id":516,"name":"(AT) KASIR ","type":"KASIR"},{"id":515,"name":"(AT) Farmasi Racikan","type":"FARMASI"},{"id":514,"name":"(AT) Pendaftaran Pribadi ","type":"FO"}],"selectFarmasi":{"id":515,"name":"(AT) Farmasi Racikan","type":"FARMASI"},"listLine":[{"id":514,"name":"(AT) Pendaftaran Pribadi ","alias":"Pendaftaran AT","type":"PENDAFTARAN"},{"id":515,"name":"(AT) Farmasi Racikan","alias":"Farmasi Racikan","type":"FARMASI"},{"id":516,"name":"(AT) KASIR ","alias":"Kasir","type":"KASIR"}]}');
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 14:47:21.660" endtime="20240123 14:47:21.727"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:21.642" endtime="20240123 14:47:21.735"/>
+</kw>
+<kw name="Set Local Storage Config Cluster Radiologi" library="Keywords_Config">
+<kw name="Read File" library="RPA.FileSystem">
+<var>${local_storage_value}</var>
+<arg>c:\\Users\\RANGGA\\Documents\\Robot_Project\\Project Single Queue\\SingleQueue_UI_Dev\\Resources\\Config/../../Config/config_cluster_srv.txt</arg>
+<doc>Reads a file as text, with given `encoding`, and returns the content."</doc>
+<msg timestamp="20240123 14:47:21.761" level="INFO">${local_storage_value} = {"clusterList":[5],"selectedRoom":[838,756],"selectedCluster":5,"selectedLine":"487"}</msg>
+<status status="PASS" starttime="20240123 14:47:21.744" endtime="20240123 14:47:21.763"/>
+</kw>
+<kw name="Execute Javascript" library="RPA.Browser.Selenium">
+<arg>localStorage.setItem('config_cluster', '${local_storage_value}');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 14:47:21.774" level="INFO">Executing JavaScript:
+localStorage.setItem('config_cluster', '{"clusterList":[5],"selectedRoom":[838,756],"selectedCluster":5,"selectedLine":"487"}');
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 14:47:21.768" endtime="20240123 14:47:21.802"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:21.735" endtime="20240123 14:47:21.806"/>
+</kw>
+<doc>Login Test</doc>
+<tag>admin</tag>
+<tag>login admin</tag>
+<status status="PASS" starttime="20240123 14:47:07.993" endtime="20240123 14:47:21.811"/>
+</test>
+<test id="s1-t2" name="choose_ticket" line="22">
+<kw name="Choose Registered Ticket" library="Keywords_Action_Ticket">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:23.854" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:21.836" endtime="20240123 14:47:23.855"/>
+</kw>
+<kw name="Click Element When Clickable" library="RPA.Browser.Selenium">
+<arg>${choose_registered_ticket}</arg>
+<doc>Waits for and clicks an element until is fully ready to be clicked.</doc>
+<status status="PASS" starttime="20240123 14:47:23.855" endtime="20240123 14:47:24.010"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:26.025" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:24.010" endtime="20240123 14:47:26.025"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:21.828" endtime="20240123 14:47:26.025"/>
+</kw>
+<doc>Pilih tiket Test</doc>
+<tag>admin</tag>
+<tag>choose tiket</tag>
+<status status="PASS" starttime="20240123 14:47:21.828" endtime="20240123 14:47:26.025"/>
+</test>
+<test id="s1-t3" name="order_service" line="27">
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${btn_ubah_data}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:47:26.348" level="INFO">Clicking element 'xpath=//button[@class="btn btn-unit-secondary bg-transparent fs-14 fw-700 c-secondary"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:26.047" endtime="20240123 14:47:26.485"/>
+</kw>
+<kw name="Add New Treatment" library="Keywords_Action_Service">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:27.515" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240123 14:47:26.492" endtime="20240123 14:47:27.515"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${element_tambah_treatment}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:47:27.563" level="INFO">Clicking element 'xpath=(//div[@class="pair-bg-doctor d-flex justify-content-center align-content-center"])[2]'.</msg>
+<status status="PASS" starttime="20240123 14:47:27.515" endtime="20240123 14:47:27.677"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${input_treatment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:27.685" level="INFO">Clicking element 'xpath=(//input[@class="input-search-pasien"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:47:27.677" endtime="20240123 14:47:27.819"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${choose_treatment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:27.829" level="INFO">Clicking element 'xpath=//label[text()="Radiologi 1"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:27.819" endtime="20240123 14:47:28.371"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${choose_tipe_treatment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:28.382" level="INFO">Clicking element 'xpath=(//option[text()="WALKIN"])[2]'.</msg>
+<status status="PASS" starttime="20240123 14:47:28.376" endtime="20240123 14:47:28.615"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:28.633" level="INFO">Clicking button 'xpath=//button[@class="caller-btn fs-14 fw-700"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:28.615" endtime="20240123 14:47:29.010"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:31.032" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:29.019" endtime="20240123 14:47:31.032"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:31.039" level="INFO">Clicking button 'xpath=//button[@class="caller-btn fs-14 fw-700"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:31.032" endtime="20240123 14:47:31.208"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:26.492" endtime="20240123 14:47:31.214"/>
+</kw>
+<kw name="Expected Result Add Treatment" library="Keywords_Expected_Result">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:33.255" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:31.238" endtime="20240123 14:47:33.263"/>
+</kw>
+<kw name="Element Should Be Visible" library="RPA.Browser.Selenium">
+<arg>${expected_add_treatment}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240123 14:47:33.476" level="INFO">Element 'xpath=(//span[@class="fst-italic"])[last()]' is displayed.</msg>
+<status status="PASS" starttime="20240123 14:47:33.266" endtime="20240123 14:47:33.479"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected result status 'Ordered' displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240123 14:47:33.499" level="INFO">Expected result status 'Ordered' displayed</msg>
+<status status="PASS" starttime="20240123 14:47:33.488" endtime="20240123 14:47:33.499"/>
+</kw>
+<kw name="Element Should Be Visible" library="RPA.Browser.Selenium">
+<arg>${expected_add_treatment_activity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240123 14:47:33.552" level="INFO">Element 'xpath=//p[text()='Radiologi 1']/preceding-sibling::p[contains(text(), 'Order')]' is displayed.</msg>
+<status status="PASS" starttime="20240123 14:47:33.504" endtime="20240123 14:47:33.555"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected result status in activity 'Order' is displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240123 14:47:33.555" level="INFO">Expected result status in activity 'Order' is displayed</msg>
+<status status="PASS" starttime="20240123 14:47:33.555" endtime="20240123 14:47:33.555"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:31.233" endtime="20240123 14:47:33.555"/>
+</kw>
+<kw name="Expected Result Order Dokter In Dokter Caller" library="Keywords_Expected_Result">
+<kw name="Go To" library="RPA.Browser.Selenium">
+<arg>${BASE_URL_DOKTER_CALLER}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240123 14:47:33.568" level="INFO">Opening url 'http://dcaller.cd.local/cluster-caller/mobile'</msg>
+<status status="PASS" starttime="20240123 14:47:33.568" endtime="20240123 14:47:34.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:37.237" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:34.222" endtime="20240123 14:47:37.237"/>
+</kw>
+<kw name="Element Should Be Visible" library="RPA.Browser.Selenium">
+<arg>${expected_patient_name_in_caller}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240123 14:47:37.287" level="INFO">Element 'xpath=//span[text()=' AUTOMATE TEST 04 ']' is displayed.</msg>
+<status status="PASS" starttime="20240123 14:47:37.237" endtime="20240123 14:47:37.294"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected result show element 'ordered' by patient name '${personal_info}[0]'</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240123 14:47:37.294" level="INFO">Expected result show element 'ordered' by patient name 'AUTOMATE TEST 04'</msg>
+<status status="PASS" starttime="20240123 14:47:37.294" endtime="20240123 14:47:37.302"/>
+</kw>
+<kw name="Go To" library="RPA.Browser.Selenium">
+<arg>${BASE_URL_CALLER_UNIT}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240123 14:47:37.303" level="INFO">Opening url 'http://dcaller.cd.local/unit-caller'</msg>
+<status status="PASS" starttime="20240123 14:47:37.303" endtime="20240123 14:47:37.461"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:33.568" endtime="20240123 14:47:37.468"/>
+</kw>
+<doc>Test order dokter</doc>
+<tag>admin</tag>
+<tag>order dokter</tag>
+<status status="PASS" starttime="20240123 14:47:26.025" endtime="20240123 14:47:37.472"/>
+</test>
+<test id="s1-t4" name="order_service_again" line="35">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:39.507" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:37.497" endtime="20240123 14:47:39.509"/>
+</kw>
+<kw name="Choose Registered Ticket" library="Keywords_Action_Ticket">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:41.530" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:39.523" endtime="20240123 14:47:41.530"/>
+</kw>
+<kw name="Click Element When Clickable" library="RPA.Browser.Selenium">
+<arg>${choose_registered_ticket}</arg>
+<doc>Waits for and clicks an element until is fully ready to be clicked.</doc>
+<status status="PASS" starttime="20240123 14:47:41.530" endtime="20240123 14:47:41.699"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:43.714" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:41.699" endtime="20240123 14:47:43.714"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:39.519" endtime="20240123 14:47:43.723"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${btn_ubah_data}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:47:43.785" level="INFO">Clicking element 'xpath=//button[@class="btn btn-unit-secondary bg-transparent fs-14 fw-700 c-secondary"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:43.729" endtime="20240123 14:47:43.931"/>
+</kw>
+<kw name="Add Two Treatment" library="Keywords_Action_Service">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:44.947" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240123 14:47:43.936" endtime="20240123 14:47:44.947"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${element_tambah_treatment}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:47:44.996" level="INFO">Clicking element 'xpath=(//div[@class="pair-bg-doctor d-flex justify-content-center align-content-center"])[2]'.</msg>
+<status status="PASS" starttime="20240123 14:47:44.947" endtime="20240123 14:47:45.135"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${input_treatment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:45.135" level="INFO">Clicking element 'xpath=(//input[@class="input-search-pasien"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:47:45.135" endtime="20240123 14:47:45.270"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${choose_treatment2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:45.280" level="INFO">Clicking element 'xpath=//label[text()="MRI"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:45.272" endtime="20240123 14:47:45.829"/>
+</kw>
+<kw name="Click Element" library="RPA.Browser.Selenium">
+<arg>${choose_tipe_treatment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:45.853" level="INFO">Clicking element 'xpath=(//option[text()="WALKIN"])[2]'.</msg>
+<status status="PASS" starttime="20240123 14:47:45.829" endtime="20240123 14:47:46.087"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:46.106" level="INFO">Clicking button 'xpath=//button[@class="caller-btn fs-14 fw-700"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:46.098" endtime="20240123 14:47:46.465"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:48.479" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:46.467" endtime="20240123 14:47:48.482"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:47:48.485" level="INFO">Clicking button 'xpath=//button[@class="caller-btn fs-14 fw-700"]'.</msg>
+<status status="PASS" starttime="20240123 14:47:48.485" endtime="20240123 14:47:48.644"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:43.934" endtime="20240123 14:47:48.644"/>
+</kw>
+<kw name="Set Local Storage Config Cluster Physiotherapy" library="Keywords_Config">
+<kw name="Read File" library="RPA.FileSystem">
+<var>${local_storage_value}</var>
+<arg>c:\\Users\\RANGGA\\Documents\\Robot_Project\\Project Single Queue\\SingleQueue_UI_Dev\\Resources\\Config/../../Config/config_cluster_srv2.txt</arg>
+<doc>Reads a file as text, with given `encoding`, and returns the content."</doc>
+<msg timestamp="20240123 14:47:48.654" level="INFO">${local_storage_value} = {"clusterList":[6],"selectedRoom":[750],"selectedCluster":6,"selectedLine":"493"}</msg>
+<status status="PASS" starttime="20240123 14:47:48.654" endtime="20240123 14:47:48.666"/>
+</kw>
+<kw name="Execute Javascript" library="RPA.Browser.Selenium">
+<arg>localStorage.setItem('config_cluster', '${local_storage_value}');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240123 14:47:48.674" level="INFO">Executing JavaScript:
+localStorage.setItem('config_cluster', '{"clusterList":[6],"selectedRoom":[750],"selectedCluster":6,"selectedLine":"493"}');
+Without any arguments.</msg>
+<status status="PASS" starttime="20240123 14:47:48.668" endtime="20240123 14:47:48.692"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:48.652" endtime="20240123 14:47:48.692"/>
+</kw>
+<kw name="Expected Result Add Treatment" library="Keywords_Expected_Result">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:50.704" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:48.703" endtime="20240123 14:47:50.704"/>
+</kw>
+<kw name="Element Should Be Visible" library="RPA.Browser.Selenium">
+<arg>${expected_add_treatment}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240123 14:47:50.752" level="INFO">Element 'xpath=(//span[@class="fst-italic"])[last()]' is displayed.</msg>
+<status status="PASS" starttime="20240123 14:47:50.704" endtime="20240123 14:47:50.755"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected result status 'Ordered' displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240123 14:47:50.755" level="INFO">Expected result status 'Ordered' displayed</msg>
+<status status="PASS" starttime="20240123 14:47:50.755" endtime="20240123 14:47:50.755"/>
+</kw>
+<kw name="Element Should Be Visible" library="RPA.Browser.Selenium">
+<arg>${expected_add_treatment_activity}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240123 14:47:50.804" level="INFO">Element 'xpath=//p[text()='Radiologi 1']/preceding-sibling::p[contains(text(), 'Order')]' is displayed.</msg>
+<status status="PASS" starttime="20240123 14:47:50.755" endtime="20240123 14:47:50.804"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected result status in activity 'Order' is displayed</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240123 14:47:50.813" level="INFO">Expected result status in activity 'Order' is displayed</msg>
+<status status="PASS" starttime="20240123 14:47:50.804" endtime="20240123 14:47:50.813"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:48.703" endtime="20240123 14:47:50.818"/>
+</kw>
+<kw name="Expected Result Order Dokter In Dokter Caller" library="Keywords_Expected_Result">
+<kw name="Go To" library="RPA.Browser.Selenium">
+<arg>${BASE_URL_DOKTER_CALLER}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240123 14:47:50.821" level="INFO">Opening url 'http://dcaller.cd.local/cluster-caller/mobile'</msg>
+<status status="PASS" starttime="20240123 14:47:50.821" endtime="20240123 14:47:51.093"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:54.117" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:51.093" endtime="20240123 14:47:54.118"/>
+</kw>
+<kw name="Element Should Be Visible" library="RPA.Browser.Selenium">
+<arg>${expected_patient_name_in_caller}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240123 14:47:54.177" level="INFO">Element 'xpath=//span[text()=' AUTOMATE TEST 04 ']' is displayed.</msg>
+<status status="PASS" starttime="20240123 14:47:54.122" endtime="20240123 14:47:54.177"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Expected result show element 'ordered' by patient name '${personal_info}[0]'</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240123 14:47:54.186" level="INFO">Expected result show element 'ordered' by patient name 'AUTOMATE TEST 04'</msg>
+<status status="PASS" starttime="20240123 14:47:54.177" endtime="20240123 14:47:54.189"/>
+</kw>
+<kw name="Go To" library="RPA.Browser.Selenium">
+<arg>${BASE_URL_CALLER_UNIT}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240123 14:47:54.193" level="INFO">Opening url 'http://dcaller.cd.local/unit-caller'</msg>
+<status status="PASS" starttime="20240123 14:47:54.192" endtime="20240123 14:47:54.314"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:50.821" endtime="20240123 14:47:54.314"/>
+</kw>
+<doc>Test order service two</doc>
+<tag>admin</tag>
+<tag>order dokter two</tag>
+<status status="PASS" starttime="20240123 14:47:37.477" endtime="20240123 14:47:54.314"/>
+</test>
+<test id="s1-t5" name="delete_service" line="46">
+<kw name="Choose Registered Ticket" library="Keywords_Action_Ticket">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:56.345" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:54.341" endtime="20240123 14:47:56.347"/>
+</kw>
+<kw name="Click Element When Clickable" library="RPA.Browser.Selenium">
+<arg>${choose_registered_ticket}</arg>
+<doc>Waits for and clicks an element until is fully ready to be clicked.</doc>
+<status status="PASS" starttime="20240123 14:47:56.347" endtime="20240123 14:47:56.512"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:58.535" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:47:56.515" endtime="20240123 14:47:58.543"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:54.337" endtime="20240123 14:47:58.546"/>
+</kw>
+<kw name="Delete Treatment" library="Keywords_Action_Service">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:47:59.574" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240123 14:47:58.551" endtime="20240123 14:47:59.574"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${edit_treatment}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:47:59.622" level="INFO">Clicking element 'xpath=(//button[@class="btn btn-pencil mt-auto"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:47:59.574" endtime="20240123 14:47:59.736"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:48:00.740" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240123 14:47:59.736" endtime="20240123 14:48:00.740"/>
+</kw>
+<kw name="Click Element When Visible" library="RPA.Browser.Selenium">
+<arg>${btn_delete_order}</arg>
+<doc>Click element identified by ``locator``, once it becomes visible.</doc>
+<msg timestamp="20240123 14:48:00.800" level="INFO">Clicking element 'xpath=(//p[@class="mb-0 c-merah-api pointer"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:48:00.740" endtime="20240123 14:48:00.917"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save_delete}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:48:00.917" level="INFO">Clicking button 'xpath=(//button[@class="caller-btn fs-14 fw-700"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:48:00.917" endtime="20240123 14:48:01.120"/>
+</kw>
+<kw name="Input Text When Element Is Visible" library="RPA.Browser.Selenium">
+<arg>${input_verification}</arg>
+<arg>${personal_info}[1]</arg>
+<doc>Input text into locator after it has become visible.</doc>
+<msg timestamp="20240123 14:48:01.217" level="INFO">Typing text '07071999' into text field 'xpath=(//input[@class="form-control"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:48:01.120" endtime="20240123 14:48:01.456"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save_delete}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:48:01.478" level="INFO">Clicking button 'xpath=(//button[@class="caller-btn fs-14 fw-700"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:48:01.464" endtime="20240123 14:48:01.673"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save_delete}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:48:01.688" level="INFO">Clicking button 'xpath=(//button[@class="caller-btn fs-14 fw-700"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:48:01.673" endtime="20240123 14:48:01.863"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240123 14:48:03.878" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240123 14:48:01.871" endtime="20240123 14:48:03.878"/>
+</kw>
+<kw name="Click Button" library="RPA.Browser.Selenium">
+<arg>${btn_save_delete}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240123 14:48:03.889" level="INFO">Clicking button 'xpath=(//button[@class="caller-btn fs-14 fw-700"])[last()]'.</msg>
+<status status="PASS" starttime="20240123 14:48:03.882" endtime="20240123 14:48:04.021"/>
+</kw>
+<status status="PASS" starttime="20240123 14:47:58.551" endtime="20240123 14:48:04.021"/>
+</kw>
+<doc>Test delete dokter</doc>
+<tag>admin</tag>
+<tag>delete dokter</tag>
+<status status="PASS" starttime="20240123 14:47:54.329" endtime="20240123 14:48:04.029"/>
+</test>
+<doc>Automation testing for order treatment</doc>
+<status status="PASS" starttime="20240123 14:47:03.179" endtime="20240123 14:48:04.049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">admin</stat>
+<stat pass="1" fail="0" skip="0">choose tiket</stat>
+<stat pass="1" fail="0" skip="0">delete dokter</stat>
+<stat pass="1" fail="0" skip="0">login admin</stat>
+<stat pass="1" fail="0" skip="0">order dokter</stat>
+<stat pass="1" fail="0" skip="0">order dokter two</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="St Cu 006">St Cu 006</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
